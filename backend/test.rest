@@ -1,0 +1,43 @@
+###
+POST http://localhost:3000/api/lifenote/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "kdanta13@gmail.com",
+  "username": "danta13",
+  "password": "Danta1221"
+}
+
+###
+POST http://localhost:3000/api/lifenote/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "danta13",
+  "password": "Danta1221"
+}
+
+###
+GET http://localhost:3000/api/lifenote/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 49f9c8c7-81c7-4198-b96b-dfb8de689865
+
+###
+PATCH http://localhost:3000/api/lifenote/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 49f9c8c7-81c7-4198-b96b-dfb8de689865
+
+{
+  "username": "danta131",
+  "password": "Danta11"
+}
+
+###
+DELETE http://localhost:3000/api/lifenote/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 49f9c8c7-81c7-4198-b96b-dfb8de689865
