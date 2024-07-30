@@ -41,3 +41,43 @@ DELETE http://localhost:3000/api/lifenote/users/current
 Content-Type: application/json
 Accept: application/json
 Authorization: 49f9c8c7-81c7-4198-b96b-dfb8de689865
+
+###
+POST http://localhost:3000/api/lifenote/notes
+Content-Type: application/json
+Accept: application/json
+Authorization: 661d921c-f6cb-431a-9f14-a366178fd409
+
+{
+  "title": "catatan pengeluaran keuangan bulan ini",
+  "description": "pada awal bulan saya menghabiskan hampir 50% dari pemasukan saya untuk membeli kebutuhan rumah, pertengahan bulan saya menghabiskan 20% untuk berbelanja keinginan saya, 30% sisanya saya tabung",
+"notetype": "GENERAL"
+}
+
+###
+GET http://localhost:3000/api/lifenote/notes
+Content-Type: application/json
+Accept: application/json
+Authorization: 661d921c-f6cb-431a-9f14-a366178fd409
+
+###
+GET http://localhost:3000/api/lifenote/notes/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 661d921c-f6cb-431a-9f14-a366178fd409
+
+###
+PUT http://localhost:3000/api/lifenote/notes/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 661d921c-f6cb-431a-9f14-a366178fd409
+
+{
+  "notetype": "PRIVATE"
+}
+
+###
+DELETE http://localhost:3000/api/lifenote/notes/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 661d921c-f6cb-431a-9f14-a366178fd409

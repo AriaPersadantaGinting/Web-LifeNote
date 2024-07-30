@@ -22,6 +22,27 @@ model User {
   verificationTokenExpires DateTime?
   verified Boolean  @default(false)
   createdAt DateTime @default(now())
-
+  note  Note[]
   @@map("users")
+}
+
+model Note {
+  id Int @id @default(autoincrement())
+  title String @db.VarChar(100)
+  description String? @db.VarChar(2500)
+  notetype  NoteType
+  createdAt  DateTime @default(now()) 
+  updatedAt  DateTime @updatedAt
+  username  String  @db.VarChar(100)
+  user User  @relation(fields: [username], references: [username])
+
+  @@map("notes") 
+}
+
+enum NoteType {
+  PRIVATE     
+  IMPORTANT   
+  GENERAL     
+  TODO        
+  ARCHIVED    
 }
